@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #0f1419;
+  color: #e0e6ed;
+}
+
+.navbar {
+  background: #1a1f2e;
+  border-bottom: 1px solid #2d3748;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a0aec0;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a365d 0%, #2d1b4e 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #2d3748;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00d4ff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #a0aec0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.card h3 {
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #a0aec0;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #0088cc 100%);
+  color: #0f1419;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-box {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  color: #00d4ff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.price-card {
+  background: #1a1f2e;
+  border: 1px solid #2d3748;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.price-card.featured {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.price {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.footer {
+  background: #1a1f2e;
+  border-top: 1px solid #2d3748;
+  padding: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: #718096;
+}
