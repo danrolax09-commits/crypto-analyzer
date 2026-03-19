@@ -1,3 +1,4 @@
+import { STRIPE_PRICES, PRICING_TIERS } from '@/lib/pricing-config';
 export default function Home() {
   const topCoins = [
     { symbol: 'BTC', name: 'Bitcoin', price: 42500, change: 5.2, volume: '$28.5B' },
