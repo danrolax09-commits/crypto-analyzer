@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  turbopack: {
-    root: './',
-  },
+  // Removed turbopack.root to let Vercel auto-detect
 };
 module.exports = nextConfig;
