@@ -13,7 +13,7 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*", "./app/*"]
     },
     "allowJs": true,
     "incremental": true,

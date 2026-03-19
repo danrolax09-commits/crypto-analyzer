@@ -15,6 +15,15 @@ export default function Home() {
     { icon: '📊', title: 'Portfolio Analysis', desc: 'Deep insights into your holdings and diversification' },
     { icon: '💼', title: 'Tax Reports', desc: 'Automated tax calculation and reporting' },
     { icon: '🔐', title: 'Bank-Grade Security', desc: 'Encrypted, read-only API integration' },
+    { icon: '🚀', title: 'Trading Signals', desc: 'AI-powered buy/sell recommendations based on technicals' },
+    { icon: '💡', title: 'Market Insights', desc: 'Daily analysis and trend reports from AI experts' },
+  ];
+
+  const predictions = [
+    { coin: 'BTC', prediction: 'Bullish', confidence: 82, nextTarget: '$48,000' },
+    { coin: 'ETH', prediction: 'Strong Buy', confidence: 88, nextTarget: '$2,800' },
+    { coin: 'SOL', prediction: 'Bullish', confidence: 75, nextTarget: '$165' },
+    { coin: 'XRP', prediction: 'Hold', confidence: 62, nextTarget: '$2.60' },
   ];
 
   return (
@@ -59,6 +68,33 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Trading Signals */}
+      <section style={{ padding: '3rem 2rem', background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)' }}>
+        <div className="container" style={{ maxWidth: '1200px', marginLeft: 'auto', marginRight: 'auto' }}>
+          <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: '#fff' }}>🤖 AI Trading Predictions</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+            {predictions.map((p) => (
+              <div key={p.coin} className="card" style={{ background: '#0f1419', borderLeft: '4px solid #00d4ff' }}>
+                <h3 style={{ marginBottom: '1rem' }}>{p.coin}</h3>
+                <div style={{ marginBottom: '1rem' }}>
+                  <div style={{ color: p.prediction === 'Strong Buy' ? '#10b981' : p.prediction === 'Bullish' ? '#3b82f6' : '#f59e0b', fontWeight: 'bold', fontSize: '1.1rem' }}>
+                    {p.prediction}
+                  </div>
+                  <div style={{ color: '#a0aec0', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                    Confidence: {p.confidence}%
+                  </div>
+                </div>
+                <div style={{ padding: '0.75rem', background: '#1a1f2e', borderRadius: '6px', marginBottom: '1rem' }}>
+                  <div style={{ color: '#a0aec0', fontSize: '0.85rem' }}>Next Target:</div>
+                  <div style={{ color: '#00d4ff', fontWeight: 'bold' }}>{p.nextTarget}</div>
+                </div>
+                <button className="btn btn-primary" style={{ width: '100%' }}>Trade {p.coin}</button>
+              </div>
+            ))}
           </div>
         </div>
       </section>
